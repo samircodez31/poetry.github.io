@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry By Samir</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Poetry By Samir</h1>
+            <div class="menu-bar" id="menu-bar">
+                &#9776; <!-- Menu bar icon -->
+            </div>
+            <ul id="nav-links">
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#shayari-section">Shayari</a></li>
+                <li><a href="#quotes-section">Quotes</a></li>
+                <li><a href="#form-section">Submission</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header id="hero-section" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="https://cdn.hero.page/pfp/9ce984fd-85a9-4cd2-92de-321b7a85f7f8-solitary-boy-in-rain-emotive-depressed-pfp-boys-1.png" alt="Emotive boy in rain">
+            </div>
+            <div class="hero-text">
+                <h2>Welcome to the Shayari & Quotes Generator!</h2>
+                <p>Get inspired with beautiful Shayari and Quotes at the click of a button. Experience the beauty of words and let them resonate with your heart.</p>
+                <a href="https://www.instagram.com/poetry_by_samir" target="_blank" class="instagram-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon" />
+                    Follow us on Instagram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-section" class="section about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <div class="about-text-image">
+                    <div class="about-text">
+                        <p>We are passionate about creating an inspiring platform for Shayari and quotes lovers. Our mission is to connect people through beautiful words and emotions.</p>
+                    </div>
+                    <div class="about-image-container">
+                        <img src="https://cdn.hero.page/pfp/9ce984fd-85a9-4cd2-92de-321b7a85f7f8-solitary-boy-in-rain-emotive-depressed-pfp-boys-1.png" alt="Team Image" class="about-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="shayari-section" class="section shayari">
+            <div class="container">
+                <h2>Shayari Generator</h2>
+                <p class="instructions">Click the button below to generate a random shayari. Let the words inspire you!</p>
+                <p id="shayari" class="shayari-text">Your generated Shayari will appear here!</p>
+                <button id="generate-shayari-btn" class="generate-button">Generate Shayari</button>
+            </div>
+        </section>
+        
+        <section id="quotes-section" class="section quotes">
+            <div class="container">
+                <h2>Quotes Generator</h2>
+                <p class="instructions">Click the button below to generate a random quote. Let the words inspire you!</p>
+                <p id="quote" class="quote-text">Your generated quote will appear here!</p>
+                <button id="generate-quote-btn" class="generate-button">Generate Quote</button>
+            </div>
+        </section>
+        
+        
+        <section id="form-section" class="form-section">
+            <h2>Submit Your Post</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div class="form-group">
+                    <label for="choice">Choice Option:</label>
+                    <select id="choice" name="choice" required>
+                        <option value="shayari">Shayari</option>
+                        <option value="quote">Quote</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="content">Shayari / Quote:</label>
+                    <textarea id="content" name="content" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+
+
+    
+
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p>&copy; 2024 Poetry By Samir. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="tos.html">Terms of Service</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://discord.gg/VJr5xdEW9t" target="_blank">
+                    <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" />
+                </a>
+                <a href="https://www.instagram.com/poetry_by_samir" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/sameerlc" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

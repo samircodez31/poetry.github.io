@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.navbar {
+    background-color: rgba(108, 99, 255, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffdd57;
+}
+
+.menu-bar {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Size of the menu bar icon */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Below the navbar */
+        right: 0; /* Align to the right */
+        background-color: rgba(108, 99, 255, 0.8); /* Match the navbar background */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .navbar ul.show {
+        display: flex; /* Show links when menu bar is clicked */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Margin for links in mobile */
+        text-align: center; /* Center text */
+    }
+
+    .menu-bar {
+        display: block; /* Show menu bar on small screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature') center/cover no-repeat;
+}
+
+.hero-content {
+    display: flex;
+    width: 90%; /* Adjust to fit within the screen */
+    max-width: 1200px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    border-radius: 50%; /* 50% border radius */
+    width: 50%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    animation: fadeInLeft 1s forwards; /* Animation */
+}
+
+.hero-text {
+    flex: 1;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeInRight 1s forwards; /* Animation */
+    animation-delay: 0.5s; /* Delay for text to appear */
+}
+
+/* Animation keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e1306c; /* Instagram color */
+    color: white; /* White text */
+    text-decoration: none;
+    padding: 12px 20px; /* Padding for button-like appearance */
+    border-radius: 30px; /* Rounded edges for a modern look */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s, transform 0.2s; /* Animation effects */
+    font-size: 1rem; /* Font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.instagram-btn img {
+    width: 24px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.instagram-btn:hover {
+    background-color: #c13584; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .instagram-btn {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center the content */
+    }
+}
+
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 10px; /* Reduced padding for smaller screens */
+    }
+}
+
+/* About Section Styles */
+.about {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Light grey gradient */
+}
+
+.about-content {
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center horizontally */
+    animation: fadeIn 0.8s ease; /* Fade-in animation for the entire section */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6c63ff; /* Main accent color */
+}
+
+.about-text-image {
+    display: flex; /* Flexbox for text and image side by side */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between text and image */
+}
+
+.about-text {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333; /* Dark text for readability */
+}
+
+.about-image-container {
+    flex: 0 0 40%; /* Fixed width for the image container */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.about-image {
+    border-radius: 15px;
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Start invisible for animation */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition */
+}
+
+.about-content:hover .about-image {
+    transform: translateX(0); /* Move into position */
+    opacity: 1; /* Fade in */
+}
+
+/* Shayari Section */
+.shayari {
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* Light blue gradient */
+}
+
+.shayari h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00796b; /* Dark teal for heading */
+}
+
+.shayari-text {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for appearance */
+    padding: 20px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    background: linear-gradient(to right, #ff3d00, #ff9100); /* Bright orange to a lighter orange */
+    color: white; /* White text for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: auto; /* Height responsive to viewport */
+    width: 90%; /* Use responsive width */
+    max-width: 800px; /* Max width for better readability */
+    margin: 20px auto; /* Center and space above */
+}
+
+/* Button Styles */
+.generate-button {
+    background-color: #00796b; /* Dark teal */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.generate-button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Quotes Section */
+.quotes {
+    background: linear-gradient(to right, #fffde7, #ffe57f); /* Light yellow gradient */
+}
+
+.quotes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff8f00; /* Dark orange for heading */
+}
+
+.quote-text {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for appearance */
+    padding: 20px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    background: linear-gradient(to right, #ff3d00, #ff9100); /* Bright orange to a lighter orange */
+    color: white; /* White text for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+    display: inline-block; /* Make it fit content */
+    margin-top: 20px; /* Space above the text */
+}
+
+/* Form Section */
+.form-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px; /* Curved card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    margin: auto; /* Center horizontally */
+}
+
+h2 {
+    text-align: center;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none; /* Disable resizing */
+    max-height: 200px; /* Limit height */
+}
+
+button {
+    width: 100%; /* Make the button full width */
+    padding: 12px; /* Increase padding for a bigger button */
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    color: white;
+    border: none;
+    border-radius: 20px; /* More rounded corners */
+    cursor: pointer;
+    transition: background 0.5s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #8BC34A, #4CAF50);
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+
+    .section {
+        padding: 30px 10px; /* Reduced padding */
+    }
+
+    .shayari h2, .quotes h2 {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+
+    .shayari-text, .quote-text {
+        padding: 15px; /* Reduce padding for smaller screens */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .generate-button {
+        font-size: 1rem; /* Adjust button size */
+    }
+}
+
+
+
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align text */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for copyright */
+}
+
+.footer-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 10px 0; /* Margin for spacing */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the links */
+}
+
+.footer-links li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+.footer-links a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition effect for color change */
+}
+
+.footer-links a:hover {
+    color: #ff9100; /* Change color on hover */
+}
+
+.social-media {
+    margin-top: 15px; /* Space above social media icons */
+}
+
+.social-media a {
+    margin: 0 10px; /* Spacing between icons */
+}
+
+.social-media img {
+    width: 24px; /* Set size for social media icons */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+
